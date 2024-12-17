@@ -5,13 +5,20 @@ section.order
 			.form-order__body
 				- var ints = [{label:'Имя', name: 'name'}, {label:'Адрес сайта', name: 'url'}, {label:'E-mail',  name: 'email'}];
 				.form-order__fields
-				.form-order__message
+				.form-order__message.form-order__message--title
 					.form-order__caption Раскажите о вашем проекте
 				.form-order__fields
 					each item in ints
 						label.form-order__label
 							input(autocomplete="off" type="text" name=item.name class="form-order__input" placeholder=item.label)
 				
-				.form-order__message
-
+				.form-order__message.form-order__message--textarea
+					.form-order__caption Раскажите о вашем проекте
 					textarea.form-order__area(name="name" placeholder="Распишите подробно")
+			.form-order__footer
+				.form-order__send-block
+					button.btn(type="submit").form-order__send Подключиться
+				.form-order__rules
+					p.form-order__rules-text Нажимая на кнопку, вы соглашаетесь с нашей #[a(href="#") Политикой конфиденциальности]
+
+			p.form-order__rules-text.form-order__rules-text--mob Нажимая на кнопку, вы соглашаетесь с нашей #[a(href="#") Политикой конфиденциальности]

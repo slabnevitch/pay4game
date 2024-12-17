@@ -119,7 +119,7 @@
           <form class="order__form form-order">
             <div class="form-order__body">
               <div class="form-order__fields"></div>
-              <div class="form-order__message">
+              <div class="form-order__message form-order__message--title">
                 <div class="form-order__caption">Раскажите о вашем проекте</div>
               </div>
               <div class="form-order__fields">
@@ -133,10 +133,20 @@
                   <input autocomplete="off" type="text" name="email" placeholder="E-mail" class="form-order__input">
                 </label>
               </div>
-              <div class="form-order__message">
+              <div class="form-order__message form-order__message--textarea">
+                <div class="form-order__caption">Раскажите о вашем проекте</div>
                 <textarea name="name" placeholder="Распишите подробно" class="form-order__area"></textarea>
               </div>
             </div>
+            <div class="form-order__footer">
+              <div class="form-order__send-block">
+                <button type="submit" class="btn form-order__send">Подключиться</button>
+              </div>
+              <div class="form-order__rules">
+                <p class="form-order__rules-text">Нажимая на кнопку, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a></p>
+              </div>
+            </div>
+            <p class="form-order__rules-text form-order__rules-text--mob">Нажимая на кнопку, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a></p>
           </form>
         </div>
       </section>

@@ -1,6 +1,21 @@
 /*--------------------order----------------------*/
 .order {
 	padding: rem(75) 0;
+
+	@include max-screen($sm){
+		padding-bottom: rem(82);
+	}
+
+	h2{
+		margin-bottom: rem(48);
+
+		@include max-screen($sm){
+			margin-bottom: rem(83);
+		}
+		@include max-screen($xs){
+			margin-bottom: rem(32);
+		}
+	}
 }
 .order__wrapper {}
 .order__form {}
@@ -9,17 +24,79 @@
 	padding: rem(20) rem(38) rem(66) rem(38);
 	display: flex;
 	flex-wrap: wrap;
-	border-radius: rem(12) rem(12) 0 0;
+	border-radius: rem(12) rem(12) 0 rem(12);
 	border: 1px solid $accent;
 	border-bottom: none;
 	column-gap: rem(40);
 	background-color: rgba(#1F362F, .5);
+
+	@include max-screen($sm){
+		flex-direction: column;
+		align-items: flex-start;
+		padding-bottom: rem(24);
+	}
+	@include max-screen($xs){
+		padding-left: rem(10);
+		padding-right: rem(10);
+		padding-top: rem(50);
+		margin-left: rem(-16);
+		margin-right: rem(-16);
+	}
 }
 .form-order__fields{
 	flex: 0 0 calc(prc(340, 1123) - rem(40));
+
+	@include max-screen($lg){
+		flex: 0 0 calc(50% - rem(40));
+
+	}
+	@include max-screen($sm){
+		flex: 0 0 auto;
+		width: rem(340);
+	}
+	@include max-screen($xs){
+		width: 100%;
+	}
 }
 .form-order__message{
-	flex: 0 0 calc(prc(744,1123) - rem(40))
+	flex: 0 0 calc(prc(744,1123) - rem(40));
+
+	@include max-screen($lg){
+		flex: 0 0 calc(50% - rem(40));
+
+	}
+	@include max-screen($sm){
+		flex: 0 0 auto;
+		width: rem(340);
+	}
+	@include max-screen($xs){
+		width: 100%;
+	}
+	&--textarea{
+
+		@include max-screen($sm){
+			margin-top: rem(40);
+
+		}
+		.form-order__caption{
+			@include min-screen($sm){
+				display: none;
+			}
+		}
+		.form-order__area{
+			@include max-screen($sm){
+				min-height: rem(200);
+			}
+		}
+	}
+	&--title{
+		.form-order__caption{
+			@include max-screen($sm){
+				display: none;
+			}
+		}
+	}
+	
 }
 .form-order__label {}
 .form-order__input {}
@@ -29,5 +106,122 @@
 }
 .form-order__area {
 	height: 100%;
+}
+.form-order__footer{
+	display: flex;
+
+	@include max-screen($xs){
+		margin-bottom: rem(24);
+		margin-left: rem(-16);
+		margin-right: rem(-16);
+	}
+}
+.form-order__send-block{
+	position: relative;
+	flex: 0 0 rem(290);
+	padding: rem(14) rem(52) rem(20) rem(38);
+	margin-left: rem(11);
+	margin-right: rem(12);
+	margin-top: rem(-1);
+	// border-radius: 0 rem(12) 0 0;
+	border-top: 1px solid $accent;
+	// border-right: 1px solid $accent;
+
+	@include max-screen($xs){
+		padding-left: 0;
+		padding-right: rem(16);
+		flex: 0 0 auto;
+	}
+
+	&:before{
+		content: '';
+		position: absolute;
+		display: block;
+		width: 12px;
+		height: 12px;
+		left: rem(-11);
+		top: -12px;
+		border-left: 1px solid $accent;
+		border-bottom: 1px solid $accent;
+		border-radius: 0 0 0 rem(12);
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		display: block;
+		width: 12px;
+		height: 12px;
+		right: rem(-11);
+		top: rem(-1);
+		border-top: 1px solid $accent;
+		border-right: 1px solid $accent;
+		border-radius: 0 rem(12) 0 0;
+	}
+
+
+}
+.form-order__rules{
+	position: relative;
+	flex: 1 1 auto;
+	padding: rem(14) rem(38) rem(20) rem(48); 
+	border-bottom: 1px solid $accent;
+	border-right: 1px solid $accent;
+	// border-left: 1px solid $accent;
+	border-radius: 0 0 rem(12) rem(12);
+	background-color: rgba(#1F362F, .5);
+
+	&:before{
+		content: '';
+		position: absolute;
+		left: rem(-2);
+		// top: 0;
+		bottom: 0;
+		height: calc(100% - rem(11));
+		width: rem(12);
+		border-left: 1px solid $accent;
+		border-bottom: 1px solid $accent;
+		border-radius: 0 0 0 rem(12);
+		// background-color: rgba($accent, .7);
+	}
+	// &:after{
+	// 	content: '';
+	// 	position: absolute;
+	// 	display: block;
+	// 	width: 12px;
+	// 	height: 12px;
+	// 	left: 0;
+	// 	bottom: 0;
+	// 	border-bottom: 1px solid $accent;
+	// 	border-left: 1px solid $accent;
+	// 	border-radius:  0 0 0 rem(12);
+	// }
+
+	@include max-screen($sm){
+		padding-left: rem(29);
+		padding-right: rem(16);
+	}
+
+
+}
+.form-order__rules-text{
+	max-width: rem(307);
+	font-family: $light;
+	color: rgba(#fff, .5);
+
+	@include max-screen($xs){
+		display: none;
+	}
+
+	&--mob{
+		display: block;
+		@include min-screen($xs){
+			display: none;
+		}
+	}
+
+	a{
+		color: rgba( #BEFF7D, .5);
+		text-decoration: none;
+	}
 }
 /*--------------------END order----------------------*/ 

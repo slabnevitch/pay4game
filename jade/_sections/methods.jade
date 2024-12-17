@@ -1,0 +1,10 @@
+section.methods
+	.methods__wrapper
+		.sect-top
+			h2 Доступные способы оплаты
+			p.sect-note Мы поддерживаем все популярные платёжные системы, чтобы вам было удобно работать с клиентами
+
+		.methods__items
+			- for (var i=0; i < 4; i++)
+				.methods__item
+					img(src="img/methods/"+(i+1)+".svg" alt="alt")

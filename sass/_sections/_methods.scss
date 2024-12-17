@@ -1,0 +1,35 @@
+/*--------------------methods----------------------*/
+.methods {
+	padding-top: rem(75);
+	padding-bottom: rem(24);
+
+	@include max-screen($xs){
+		padding-top: rem(48);
+		padding-bottom: rem(72)
+
+	}
+}
+.methods__wrapper {}
+.sect-top {}
+.sect-note {}
+.methods__items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap:rem(24);
+}
+.methods__item {
+	padding: rem(24) rem(48);
+	min-height: rem(96);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #112B47;
+	border-radius: 40px 0px 40px 0px;
+
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+/*--------------------END methods----------------------*/ 

@@ -1,14 +1,39 @@
 /*--------------------features----------------------*/
 .features {
 	padding-top: rem(48);
+	padding-bottom: rem(24);
+
+	@include max-screen($sm){
+		padding-bottom: rem(75);
+	}
+	@include max-screen($xs){
+		padding: rem(48) 0;
+	}
 }
 .features__wrapper {}
 .features__items {
 	@include flex-cols-gap(24, 24, 3, ($md: 2, $sm: 1), 'features__item', 1);
 }
-.features__item {}
+.features__item {
+	padding: rem(24);
+	border: 1px solid $accent;
+	border-radius: 40px 0px 40px 0px;
+	background-color: rgba(42, 64, 88, 0.5);
+}
 .item-features {}
-.item-features__icon {}
-.item-features__title {}
+.item-features__icon {
+	width: rem(48);
+	height: rem(48);
+	position: relative;
+	margin-bottom: rem(8);
+
+	img{
+		@include absolute-center;
+	}
+}
+.item-features__title {
+	margin-bottom: 8px;
+	font-family: $bold;
+}
 .item-features__text {}
 /*--------------------END features----------------------*/ 

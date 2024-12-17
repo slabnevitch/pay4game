@@ -13,6 +13,9 @@ html, body{
 	padding: 0;
 	min-height: 100%;
 }
+.main-wrapper{
+	overflow: hidden;
+}
 body{
 	font-family: $light;
 	font-weight: normal;

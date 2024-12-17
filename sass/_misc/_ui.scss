@@ -4,7 +4,33 @@ h1{
   font-family: $bold;
   font-size: rem(40);
 }
+h2{
+  margin-bottom: rem(24);
+  font-family: $bold;
+  font-size: rem(32);
+  color: $accent;
+}
+.sect-top {
+  margin-bottom: rem(48);
+  text-align: center;
+}
+.sect-note {
+  max-width: rem(550);
+  margin-left: auto;
+  margin-right: auto;
+  font-family: $med;
+
+  @include max-screen($sm){
+    font-family: $reg;
+  }
+
+  @include max-screen($xss){
+    max-width: rem(260);
+  }
+}
 .btn{
+
+  @include but-null;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +42,7 @@ h1{
   background-color: $accent;
   padding: rem(5) rem(32) rem(10) rem(32);
   font-size: rem(20);
+  font-family: $light;
   line-height: 1;
   border-radius: rem(40) 0 rem(40) 0;
   text-align: center;
@@ -55,7 +82,7 @@ h1{
   padding: 0;
   background-color: transparent;
   border: none;
-  z-index: 3;
+  z-index: 4;
 
   span:after, span:before{
 

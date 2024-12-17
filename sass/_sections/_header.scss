@@ -1,8 +1,11 @@
 /*--------------------header----------------------*/
 .header{
+
 }
 .header__wrapper {}
 .header__inner {
+	position: relative;
+	z-index: 4;
 	min-height: rem(103);
 	padding: rem(8) 0;
 	display: flex;
@@ -23,13 +26,13 @@
 }
 .header__menu {
 	@include menu-mob($media: $sm, $burgerColor: #000, $burgerOpenColor: #000, $plateBgColor: #112B47, $plateHeight: 103);
-
+	z-index: 3;
 }
 .menu-header {}
 .menu-header__body {
 	display: flex;
 	align-items: center;
-	flex-wrap: wrap;
+	
 	column-gap: rem(24);
 
 
@@ -44,6 +47,10 @@
 		padding-left: rem(16);
 		padding-right: rem(16);
 		background-color: #112B47;
+	}
+
+	@include min-screen($sm){
+		flex-wrap: wrap;
 	}
 }
 .menu-header__item {

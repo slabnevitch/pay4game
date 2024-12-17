@@ -37,9 +37,10 @@ html(lang='ru')
 		//- include ../_misc/_footer-to-bottom
 		
 		//- при использовании _body-html-for-slideout или _footer-to-bottom  -- закомментировать:
-		include ../_sections/header
-		block content
-		include ../_sections/footer
+		.main-wrapper
+			include ../_sections/header
+			block content
+			include ../_sections/footer
 		
 
 		//- УДАЛИТЬ если в gulpfile.js buildMode = 'webpack'

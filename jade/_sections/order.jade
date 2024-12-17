@@ -5,9 +5,13 @@ section.order
 			.form-order__body
 				- var ints = [{label:'Имя', name: 'name'}, {label:'Адрес сайта', name: 'url'}, {label:'E-mail',  name: 'email'}];
 				.form-order__fields
+				.form-order__message
+					.form-order__caption Раскажите о вашем проекте
+				.form-order__fields
 					each item in ints
 						label.form-order__label
 							input(autocomplete="off" type="text" name=item.name class="form-order__input" placeholder=item.label)
 				
 				.form-order__message
-					texarea.form-order__area(name="")
+
+					textarea.form-order__area(name="name" placeholder="Распишите подробно")

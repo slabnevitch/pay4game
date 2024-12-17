@@ -16,6 +16,7 @@
 	@include placecolor(rgba(#fff, 0.5));
 	color: #fff;
 	font-family: $light;
+	font-size: rem(16);
 	text-align: center;
 }
 
@@ -44,15 +45,20 @@
 }
 .form-order__area{
 	display: block;
+	padding: rem(14);
+	padding-top: rem(12);
 	width: 100%;
-	height: rem(100);
-	padding:rem(20);
+	height: 100%;
     resize: none;
-	border: none;
+	border: 1px solid $accent;
+	border-radius: rem(10);
 	background-color: #213004;
-	padding-left: rem(20);
-	color: #222222;
-	font-family: inherit;
+	border: 1px solid $accent;
+	border-radius: rem(10);
+	@include placecolor(rgba(#fff, 0.5));
+	color: #fff;
+	font-family: $light;
+	font-size: rem(16);
 }
 .form__policy {
 

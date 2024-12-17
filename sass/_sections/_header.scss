@@ -16,9 +16,13 @@
 	img{
 		width: 100%;
 	}
+
+	@include max-screen($xss){
+		display: none;
+	}
 }
 .header__menu {
-	@include menu-mob($media: $sm, $burgerColor: #000, $burgerOpenColor: #000, $plateBgColor: #fff, $plateHeight: 80);
+	@include menu-mob($media: $sm, $burgerColor: #000, $burgerOpenColor: #000, $plateBgColor: #112B47, $plateHeight: 103);
 
 }
 .menu-header {}
@@ -32,15 +36,33 @@
 	@include max-screen($lg){
 		column-gap: rem(12);
 	}
+	@include max-screen($sm){
+		flex-direction: column;
+		align-items: flex-start;
+		row-gap: rem(24);
+		padding-top: rem(103);
+		padding-left: rem(16);
+		padding-right: rem(16);
+		background-color: #112B47;
+	}
 }
 .menu-header__item {
 	list-style-type: none;
+
+	&--auth-btn{
+		margin-top: rem(20);
+		@include min-screen($sm){
+			display: none;
+		}
+	}
 }
 .menu-header__link {
+	font-family: $light;
 	font-size: rem(20);
 	color: rgba(#fff, .5);
 	text-decoration: none;
 	transition: color .1s ease-in;
+	@include but-null();
 
 	@media (any-hover: hover) { //только для устройств с ховером
 			&:hover{
@@ -50,6 +72,10 @@
 
 	@include max-screen($lg){
 		font-size: rem(14);
+	}
+	@include max-screen($sm){
+		display: block;
+		font-size:rem(20);
 	}
 }
 

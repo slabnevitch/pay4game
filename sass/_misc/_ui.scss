@@ -1,4 +1,9 @@
 /*--------------------ui----------------------*/
+h1{
+  margin-bottom: rem(24);
+  font-family: $bold;
+  font-size: rem(40);
+}
 .btn{
   display: inline-flex;
   justify-content: center;
@@ -50,6 +55,7 @@
   padding: 0;
   background-color: transparent;
   border: none;
+  z-index: 3;
 
   span:after, span:before{
 

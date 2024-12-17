@@ -1,0 +1,14 @@
+/*--------------------features----------------------*/
+.features {
+	padding-top: rem(48);
+}
+.features__wrapper {}
+.features__items {
+	@include flex-cols-gap(24, 24, 3, ($md: 2, $sm: 1), 'features__item', 1);
+}
+.features__item {}
+.item-features {}
+.item-features__icon {}
+.item-features__title {}
+.item-features__text {}
+/*--------------------END features----------------------*/ 

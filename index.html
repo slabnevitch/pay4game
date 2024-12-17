@@ -25,22 +25,60 @@
           <div class="header__logo"><img src="img/logo.svg" alt="alt"></div>
           <nav class="header__menu menu-header">
             <ul class="menu-header__body">
-              <li class="menu-header__item"><a href="#" data-anchor="about" class="menu-header__link">О нас</a></li>
-              <li class="menu-header__item"><a href="#" data-anchor="methods" class="menu-header__link">Способы оплаты</a></li>
-              <li class="menu-header__item"><a href="#" data-anchor="for" class="menu-header__link">Для кого</a></li>
-              <li class="menu-header__item"><a href="#" data-anchor="auth" class="menu-header__link">Авторизация</a></li>
+              <li class="menu-header__item">
+                <button type="button" data-anchor="about" class="menu-header__link">О нас</button>
+              </li>
+              <li class="menu-header__item">
+                <button type="button" data-anchor="methods" class="menu-header__link">Способы оплаты</button>
+              </li>
+              <li class="menu-header__item">
+                <button type="button" data-anchor="for" class="menu-header__link">Для кого</button>
+              </li>
+              <li class="menu-header__item">
+                <button type="button" data-anchor="auth" class="menu-header__link">Авторизация</button>
+              </li>
+              <li class="menu-header__item menu-header__item--auth-btn">
+                <button type="button" data-anchor="auth" class="btn">Подключиться</button>
+              </li>
             </ul>
-          </nav><a href="#" class="btn">Подключиться</a>
+          </nav>
+          <button type="button" data-anchor="auth" class="btn">Подключиться</button>
         </div>
       </div>
     </header>
-    <h1 style="text-align:center;">Привет! Можно начинать</h1>
-    <div class="wrapper">
-      <div class="wrapper-flex"></div>
-    </div>
-    <section class="example">
-      <div class="wrapper"></div>
+    <section class="hero">
+      <div class="hero__wrapper">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <h1>Приём платежей <br>для международного бизнеса <br>в РФ и СНГ</h1>
+            <p class="hero__text">Мы предлагаем простое и надёжное решение для обработки платежей</p>
+            <div class="hero__footer"><a href="#" class="btn">Узнать больше</a></div>
+          </div>
+          <div class="hero__img"><img src="img/hero/hero-img.svg" alt="alt" class="hero__visula"><img src="img/hero/hero-bg.svg" alt="alt" class="hero__bg"></div>
+        </div>
+      </div>
     </section>
+    <div class="features">
+      <div class="features__wrapper">
+        <div class="features__items">
+          <article class="features__item item-features">
+            <div class="item-features__icon"><img src="img/features/1.svg" alt="alt"></div>
+            <div class="item-features__title">Быстрое подключение</div>
+            <p class="item-features__text">Интеграция за 1 день</p>
+          </article>
+          <article class="features__item item-features">
+            <div class="item-features__icon"><img src="img/features/2.svg" alt="alt"></div>
+            <div class="item-features__title">Разнообразные методы выплат</div>
+            <p class="item-features__text">Поддержка банковских карт СПБ и других методов</p>
+          </article>
+          <article class="features__item item-features">
+            <div class="item-features__icon"><img src="img/features/3.svg" alt="alt"></div>
+            <div class="item-features__title">Низкая комиссия</div>
+            <p class="item-features__text">Минимальные издержки для вашего бизнеса</p>
+          </article>
+        </div>
+      </div>
+    </div>
     <footer class="footer"></footer>
     
     

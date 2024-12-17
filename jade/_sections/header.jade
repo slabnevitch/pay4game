@@ -12,5 +12,8 @@ header.header
 				ul.menu-header__body
 					each item, i in menu
 						li.menu-header__item
-							a(href="#" data-anchor=item.anchor).menu-header__link= item.name
-			a(href="#").btn Подключиться
+							button(type="button" data-anchor=item.anchor).menu-header__link= item.name
+					li.menu-header__item.menu-header__item--auth-btn
+						button.btn(type="button" data-anchor="auth") Подключиться
+			
+			button.btn(type="button" data-anchor="auth") Подключиться

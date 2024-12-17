@@ -1,0 +1,10 @@
+.features
+	.features__wrapper
+		- let items = [{name: 'Быстрое подключение', text: 'Интеграция за 1 день'}, {name: 'Разнообразные методы выплат', text: 'Поддержка банковских карт СПБ и других методов'}, {name: 'Низкая комиссия', text: 'Минимальные издержки для вашего бизнеса'}];
+		.features__items
+			each item, i in items
+				article.features__item.item-features
+					.item-features__icon
+						img(src="img/features/"+(i+1)+".svg" alt="alt")
+					.item-features__title= item.name
+					p.item-features__text= item.text

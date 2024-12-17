@@ -235,9 +235,9 @@ $columnClass: '', $wrap: 1) {
 		&:before{//верхняя плашка с заливкой (её может и не быть)
 			content: '';
 			height: rem($plateHeight);
-			width: 100%;
+			width: calc(100% - rem(40));
 			position: fixed;
-			right: -100%;
+			left: -100%;
 			top: 0;
 			background-color: $plateBgColor;
 			transition: right .4s ease;
@@ -251,16 +251,17 @@ $columnClass: '', $wrap: 1) {
 			}
 		}
 		.menu-opened & {
-			right: 0;
+			left: 0;
 		}
 		@media screen and (max-width: $media){
 			position: fixed;
 			top: 0;
-			right: -100%;
-			width: 100%;
+			left: -100%;
+			width: calc(100% - rem(40));
 			height: 100%;
 			transition: all .4s ease;
 			overflow-y: auto;
+			z-index: 2;
 		}
 
 	}

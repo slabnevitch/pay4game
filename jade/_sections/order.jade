@@ -1,0 +1,13 @@
+section.order
+	.order__wrapper
+		h2 Оставьте заявку на подключение
+		form.order__form.form-order
+			.form-order__body
+				- var ints = [{label:'Имя', name: 'name'}, {label:'Адрес сайта', name: 'url'}, {label:'E-mail',  name: 'email'}];
+				.form-order__fields
+					each item in ints
+						label.form-order__label
+							input(autocomplete="off" type="text" name=item.name class="form-order__input" placeholder=item.label)
+				
+				.form-order__message
+					texarea.form-order__area(name="")

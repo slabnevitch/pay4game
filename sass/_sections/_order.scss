@@ -1,0 +1,25 @@
+/*--------------------order----------------------*/
+.order {
+	padding: rem(75) 0;
+}
+.order__wrapper {}
+.order__form {}
+.form-order {}
+.form-order__body {
+	padding: rem(20) rem(38) 0 rem(38);
+	display: flex;
+	column-gap: rem(40);
+	background-color: rgba(#1F362F, .5);
+}
+.form-order__fields{
+	flex: 0 0 prc(340, 1123);
+}
+.form-order__message{
+	flex: 0 0 prc(744,1123);
+}
+.form-order__label {}
+.form-order__input {}
+.form-order__area {
+	height: 100%;
+}
+/*--------------------END order----------------------*/ 

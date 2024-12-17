@@ -1,5 +1,98 @@
 /*--------------------footer----------------------*/
-.footer{
-	
+.footer {
+	padding: rem(75) 0;
+	background-color: #051930;
+
+	@include max-screen($sm){
+		padding: rem(75) prc(100,728);
+	}
+
+	@include max-screen($xss){
+		padding: rem(48) 0 rem(64) 0;
+	}
+}
+.footer__wrapper {}
+.footer__top {
+	position: relative;
+	padding-bottom: rem(24);
+	border-bottom: rem(2) solid rgba(#fff, .2);
+
+	&:after{
+		content: '';
+		height: rem(2);
+		width: rem(160);
+		display: none;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background-color: rgba(#fff, .2);
+
+
+		@include max-screen($xss){
+			display: block;
+		}
+	}
+
+	@include max-screen($xss){
+		border-bottom: none;
+	}
+}
+.footer__logo {
+	max-width: rem(180);
+	margin-left: auto;
+	margin-right: auto;
+
+	img{
+		width: 100%;
+	}
+}
+.footer__body {
+	padding: rem(48) 0;
+
+	@include max-screen($xs){
+	 	padding-top: rem(34);
+	 } 
+}
+.footer__menu {
+}
+.menu-footer {}
+.menu-footer__list {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: rem(24);
+
+}
+.menu-footer__item {
+	list-style-type: none;
+}
+.menu-footer__link {
+	color: rgba(#fff, .5);
+	font-size: rem(20);
+	transition: color .1s ease-in;
+	text-decoration: none;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				color: #fff;
+			}
+		}
+}
+.footer__bottom {
+	text-align: center;
+}
+.footer__email {
+	color: rgba(#fff, .5);
+	font-size: rem(20);
+	transition: color .1s ease-in;
+	text-decoration: none;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				color: #fff;
+			}
+		}
 }
 /*--------------------END footer----------------------*/ 

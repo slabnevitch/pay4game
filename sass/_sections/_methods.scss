@@ -1,8 +1,12 @@
 /*--------------------methods----------------------*/
 .methods {
-	padding-top: rem(75);
-	padding-bottom: rem(24);
+	padding: rem(75) 0;
 
+	@include max-screen($sm){
+		padding-top: rem(48);
+		padding-bottom: 0;
+
+	}
 	@include max-screen($xs){
 		padding-top: rem(48);
 		padding-bottom: rem(72)

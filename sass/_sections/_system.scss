@@ -1,0 +1,41 @@
+/*--------------------system----------------------*/
+.system {
+	padding-top: rem(60);
+	padding-bottom: rem(47);
+
+	@include max-screen($sm){
+		padding-top: rem(75);
+	}
+	@include max-screen($xs){
+		padding-top: rem(48);
+	}
+
+	h2{
+		margin-bottom: rem(48);
+	}
+}
+.system__wrapper {}
+.system__items {
+	@include flex-cols-gap(24, 24, 3, ($md: 2, $sm: 1), 'system__item', 1);
+}
+.system__item {
+	padding: rem(45) rem(24);
+	text-align: center;
+	border-radius: 40px 0px 40px 0px;
+	background: linear-gradient(180.00deg, rgba(100, 133, 168, 0.2),rgba(32, 54, 78, 0.2) 100%);
+
+	@include max-screen($xss){
+		padding-right: rem(5);
+		padding-left: rem(5);
+	}
+}
+.item-system {}
+.item-system__icon {
+	margin-left: auto;
+	margin-right: auto;
+	width: rem(48);
+	height: rem(48);
+	margin-bottom: rem(24);
+}
+.item-system__text {}
+/*--------------------END system----------------------*/ 

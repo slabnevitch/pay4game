@@ -1,0 +1,16 @@
+header.header
+	.header__wrapper
+		.header__inner
+			button.toggle-mnu(type="button")
+				span
+			.header__logo
+				img(src="img/logo.svg" alt="alt")
+			
+			- var menu = [{name:'О нас', anchor:'about'}, {name:'Способы оплаты', anchor:'methods'}, {name:'Для кого', anchor:'for'}, {name:'Авторизация', anchor:'auth'}];		
+			
+			nav.header__menu.menu-header
+				ul.menu-header__body
+					each item, i in menu
+						li.menu-header__item
+							a(href="#" data-anchor=item.anchor).menu-header__link= item.name
+			a(href="#").btn Подключиться

@@ -1,0 +1,56 @@
+/*--------------------header----------------------*/
+.header{
+}
+.header__wrapper {}
+.header__inner {
+	min-height: rem(103);
+	padding: rem(8) 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: rem(10);
+}
+.header__logo {
+	max-width: rem(180);
+	flex-shrink: 0;
+	img{
+		width: 100%;
+	}
+}
+.header__menu {
+	@include menu-mob($media: $sm, $burgerColor: #000, $burgerOpenColor: #000, $plateBgColor: #fff, $plateHeight: 80);
+
+}
+.menu-header {}
+.menu-header__body {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	column-gap: rem(24);
+
+
+	@include max-screen($lg){
+		column-gap: rem(12);
+	}
+}
+.menu-header__item {
+	list-style-type: none;
+}
+.menu-header__link {
+	font-size: rem(20);
+	color: rgba(#fff, .5);
+	text-decoration: none;
+	transition: color .1s ease-in;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				color: #fff;
+			}
+		}
+
+	@include max-screen($lg){
+		font-size: rem(14);
+	}
+}
+
+/*--------------------END header----------------------*/ 

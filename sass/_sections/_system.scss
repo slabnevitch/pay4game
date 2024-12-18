@@ -19,6 +19,8 @@
 	@include flex-cols-gap(24, 24, 3, ($md: 2, $sm: 1), 'system__item', 1);
 }
 .system__item {
+	display: flex;
+	flex-direction: column;
 	padding: rem(45) rem(24);
 	text-align: center;
 	border-radius: 40px 0px 40px 0px;
@@ -31,11 +33,21 @@
 }
 .item-system {}
 .item-system__icon {
+	flex: 0 0 auto;
 	margin-left: auto;
 	margin-right: auto;
 	width: rem(48);
 	height: rem(48);
 	margin-bottom: rem(24);
 }
-.item-system__text {}
+.item-system__body{
+	// margin-top: auto;
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+}
+.item-system__text {
+
+	flex: 1 1 auto;
+}
 /*--------------------END system----------------------*/ 

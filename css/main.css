@@ -858,6 +858,10 @@ h2 {
 }
 
 .system__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 2.8125rem 1.5rem;
   text-align: center;
   border-radius: 40px 0px 40px 0px;
@@ -865,11 +869,17 @@ h2 {
 }
 
 .item-system__icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   margin-left: auto;
   margin-right: auto;
   width: 3rem;
   height: 3rem;
   margin-bottom: 1.5rem;
+}
+
+.item-system__text {
+  margin-top: auto;
 }
 
 /*--------------------END system----------------------*/

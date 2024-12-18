@@ -262,6 +262,10 @@ $columnClass: '', $wrap: 1) {
 			transition: all .4s ease;
 			overflow-y: auto;
 			z-index: 2;
+			
+			@supports(height: 100svh){
+				height: 100dvh;
+			}
 		}
 
 	}

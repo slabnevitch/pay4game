@@ -71,7 +71,7 @@
 // require ('~/app/libs-vanilla/service-functions/scrollWidth.js');
 
 //- scroll-to-sects--------------------------
-// import {ScrollToSects} from '~/app/libs-vanilla/service-functions/all-functions.js';
+import {ScrollToSects} from '~/app/libs-vanilla/service-functions/all-functions.js';
 
 //- ScrollTabs (прокрутка длинных табов на моббильных экранах)-------------------------- 
 // import {ScrollTabs} from '~/app/libs-vanilla/service-functions/all-functions.js';
@@ -216,9 +216,32 @@
 
 		document.querySelector(".toggle-mnu").onclick = function() {
 			// document.querySelector(".toggle-mnu").classList.toggle("on");
-			document.documentElement.classList.toggle('menu-opened');
-			document.documentElement.classList.toggle('lock');
+			// document.documentElement.classList.toggle('menu-opened');
+			// document.documentElement.classList.toggle('lock');
 		}
+
+		document.onclick = function(e) {
+			var targ = e.target;
+			if(targ.closest(".toggle-mnu")){
+				document.documentElement.classList.toggle('menu-opened');
+				document.documentElement.classList.toggle('lock');
+			}else if(targ.closest(".menu-header__item") || targ.closest(".menu-cover")){
+				document.documentElement.classList.remove('menu-opened');
+				document.documentElement.classList.remove('lock')
+			}
+		}
+
+		new ScrollToSects({
+		    linksContainer: 'header',//контейнер, в котором лежат кнопки навигации. Если контейнеров несколько, перечислить ч/з запятую.
+		    offset: 100,//отступ от верха экрана при прокрутке (если нужен)
+		    sectsSelector: '[data-anchor-target]',//селектор секций, default - "section"
+		     delay: 600,//задержка перед прокруткой. Может понадобится, елсли перед прокруткой нужно время на анимацию закрытия моб. меню, например
+		     // anchorSpy: false, //добавление активного класса ссылке при скролле, если соответствующая ей секция попадает в экран
+		     // activeClassAdding: false, //добавление классов активным ссылкам
+		    afterNavClick: function(){
+		      // выполнится после нажатия на любою кнопку навигации, передзадержкой, если она задана
+		    }
+		  });
 
 	}); //DOMContentLoaded
 

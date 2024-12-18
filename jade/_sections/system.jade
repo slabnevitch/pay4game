@@ -1,10 +1,10 @@
-section.system
+section.system(data-anchor-target="for")
 	.system__wrapper
 		h2 Для кого подходит наша система
 		- let sys = ['Международные компании, которые хотят работать на рынке РФ и СНГ', 'Платформы электронной коммерции', 'Онлайн-сервисы <br>(подписки, игры, обучающие платформы)'];
 		.system__items
 			each item, i in sys
-				article.system__item.item-system
+				.system__item.item-system
 					.item-system__icon
 						img(src="img/system/"+(i+1)+".svg" alt="alt")
 					p.item-system__text!= item

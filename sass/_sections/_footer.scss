@@ -64,15 +64,25 @@
 	flex-wrap: wrap;
 	gap: rem(24);
 
+	@include max-screen($xss){
+		flex-direction: column;
+		align-items: center;
+	}
+
 }
 .menu-footer__item {
 	list-style-type: none;
 }
 .menu-footer__link {
+	display: block;
 	color: rgba(#fff, .5);
 	font-size: rem(20);
 	transition: color .1s ease-in;
 	text-decoration: none;
+
+	@include max-screen($xs){
+		text-align: center;
+	}
 
 	@media (any-hover: hover) { //только для устройств с ховером
 			&:hover{

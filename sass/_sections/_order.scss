@@ -39,12 +39,12 @@
 		padding-left: rem(10);
 		padding-right: rem(10);
 		padding-top: rem(50);
-		margin-left: rem(-16);
-		margin-right: rem(-16);
+		margin-left: rem(-15);
+		margin-right: rem(-15);
 	}
 }
 .form-order__fields{
-	flex: 0 0 calc(prc(340, 1123) - rem(40));
+	flex: 0 0 calc(prc(380, 1121) - rem(40));
 
 	@include max-screen($lg){
 		flex: 0 0 calc(50% - rem(40));
@@ -59,7 +59,7 @@
 	}
 }
 .form-order__message{
-	flex: 0 0 calc(prc(744,1123) - rem(40));
+	flex: 0 0 prc(740,1121);
 
 	@include max-screen($lg){
 		flex: 0 0 calc(50% - rem(40));
@@ -112,8 +112,8 @@
 
 	@include max-screen($xs){
 		margin-bottom: rem(24);
-		margin-left: rem(-16);
-		margin-right: rem(-16);
+		margin-left: rem(-15);
+		margin-right: rem(-15);
 	}
 }
 .form-order__send-block{

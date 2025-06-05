@@ -13,16 +13,18 @@ block content
 						a(href="#").payment__logo
 							img(src="img/logo.svg" alt="alt")
 					.payment__content
-						.payment__title Оплата заказа
-						.payment__subtitle Введите данные карты для продолжения оплаты
+						.payment__header
+							.payment__title Оплата заказа
+							.payment__subtitle Введите данные карты для продолжения оплаты
 						
 						form(action="#").order__form.order__form--payment.form-order
 							input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="Номер карты")
 
-							.form-order__col
-								input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="ММ/ГГ")
-							.form-order__col
-								input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="СVC")
+							.form-order__cols
+								.form-order__col
+									input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="ММ/ГГ")
+								.form-order__col
+									input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="СVC")
 
 							.form-order__text как на карте
 							
@@ -38,7 +40,7 @@ block content
 			.payment__column
 				.payment__info.info-payment
 					.info-payment__title Pay4game
-					.info-payment__price 322.22 руб.
+					.payment__title 322.22 руб.
 					.info-payment__title Назначение платежа
 					.info-payment__text Оплата счета 256352073
 

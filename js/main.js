@@ -214,12 +214,6 @@ import {ScrollToSects} from '~/app/libs-vanilla/service-functions/all-functions.
 (function() {
 	document.addEventListener('DOMContentLoaded', () => {
 
-		document.querySelector(".toggle-mnu").onclick = function() {
-			// document.querySelector(".toggle-mnu").classList.toggle("on");
-			// document.documentElement.classList.toggle('menu-opened');
-			// document.documentElement.classList.toggle('lock');
-		}
-
 		document.onclick = function(e) {
 			var targ = e.target;
 			if(targ.closest(".toggle-mnu")){
@@ -242,6 +236,45 @@ import {ScrollToSects} from '~/app/libs-vanilla/service-functions/all-functions.
 		      // выполнится после нажатия на любою кнопку навигации, передзадержкой, если она задана
 		    }
 		  });
+
+		// inputs jump
+		if(document.querySelector(".form-order__code") !== null){
+			var pinContainer = document.querySelector(".form-order__code"); //в этот блок надо положить все необходимые инпуты
+
+			pinContainer.addEventListener('keyup', function (event) {
+			    var target = event.srcElement;
+			    
+			    var maxLength = parseInt(target.attributes["maxlength"].value, 10);
+			    var myLength = target.value.length;
+
+			    if (myLength >= maxLength) {
+			        var next = target;
+			        while (next = next.nextElementSibling) {
+			            if (next == null) break;
+			            if (next.tagName.toLowerCase() == "input") {
+			                next.focus();
+			                break;
+			            }
+			        }
+			    }
+
+			    if (myLength === 0) {
+			        var next = target;
+			        while (next = next.previousElementSibling) {
+			            if (next == null) break;
+			            if (next.tagName.toLowerCase() == "input") {
+			                next.focus();
+			                break;
+			            }
+			        }
+			    }
+			}, false);
+
+			pinContainer.addEventListener('keydown', function (event) {
+			    var target = event.srcElement;
+			    target.value = "";
+			}, false);
+		}
 
 	}); //DOMContentLoaded
 

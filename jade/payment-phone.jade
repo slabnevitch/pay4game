@@ -2,40 +2,26 @@ extends _templates/main-payment
 //- extends _templates/main-tailwind
 
 block title
-	| Платежная страница
+	| Платежная страница - номер телефона
 
 block content
 	.payment-page
 		.payment
 			.payment__column
 				.payment__container
-					.payment__top
+					.payment__top.payment__top--mb0
 						a(href="#").payment__logo
 							img(src="img/logo.svg" alt="alt")
 					.payment__content
 						.payment__header
 							.payment__title Оплата заказа
-							.payment__subtitle Введите данные карты для продолжения оплаты
+							.payment__subtitle Введите номер телефона, на него поступит PUSH-уведомление или СМС для оплаты
 						
 						form(action="#").order__form.order__form--payment.form-order
-							input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="Номер карты")
-
-							.form-order__cols
-								.form-order__col
-									input(autocomplete="off" type="text" name="" class="form-order__input form-order__input--align-left" placeholder="ММ/ГГ")
-								.form-order__col
-									input(autocomplete="off" type="text" name="" class="form-order__input form-order__input--align-left" placeholder="СVC")
-
-							.form-order__text как на карте
-							
-							input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="IVAN INANOV")
+							input(autocomplete="off" type="text" name="" class="form-order__input form-order__input--align-left form-order__input--mb24" placeholder="Номер телефона")
 
 							.form-order__bottom
 								button.btn.form-order__send(type="submit") Оплатить
-
-						.payment__logos
-							- for (var i=0; i < 4; i++)
-								img(src="img/methods/"+(i+1) + ".svg" class="payment__logo" alt="alt")
 						
 			.payment__column
 				.payment__info.info-payment

@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Платежная страница</title>
+    <title>Платежная страница - номер телефона</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" sizes="16x16">
@@ -22,30 +22,18 @@
       <div class="payment">
         <div class="payment__column">
           <div class="payment__container">
-            <div class="payment__top"><a href="#" class="payment__logo"><img src="img/logo.svg" alt="alt"></a></div>
+            <div class="payment__top payment__top--mb0"><a href="#" class="payment__logo"><img src="img/logo.svg" alt="alt"></a></div>
             <div class="payment__content">
               <div class="payment__header">
                 <div class="payment__title">Оплата заказа</div>
-                <div class="payment__subtitle">Введите данные карты для продолжения оплаты</div>
+                <div class="payment__subtitle">Введите номер телефона, на него поступит PUSH-уведомление или СМС для оплаты</div>
               </div>
               <form action="#" class="order__form order__form--payment form-order">
-                <input autocomplete="off" type="text" name="" placeholder="Номер карты" class="form-order__input">
-                <div class="form-order__cols">
-                  <div class="form-order__col">
-                    <input autocomplete="off" type="text" name="" placeholder="ММ/ГГ" class="form-order__input form-order__input--align-left">
-                  </div>
-                  <div class="form-order__col">
-                    <input autocomplete="off" type="text" name="" placeholder="СVC" class="form-order__input form-order__input--align-left">
-                  </div>
-                </div>
-                <div class="form-order__text">как на карте</div>
-                <input autocomplete="off" type="text" name="" placeholder="IVAN INANOV" class="form-order__input">
+                <input autocomplete="off" type="text" name="" placeholder="Номер телефона" class="form-order__input form-order__input--align-left form-order__input--mb24">
                 <div class="form-order__bottom">
                   <button type="submit" class="btn form-order__send">Оплатить</button>
                 </div>
               </form>
-              <div class="payment__logos"><img src="img/methods/1.svg" alt="alt" class="payment__logo"><img src="img/methods/2.svg" alt="alt" class="payment__logo"><img src="img/methods/3.svg" alt="alt" class="payment__logo"><img src="img/methods/4.svg" alt="alt" class="payment__logo">
-              </div>
             </div>
           </div>
         </div>

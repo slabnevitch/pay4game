@@ -7,7 +7,14 @@
 	justify-content: center;
 	background: linear-gradient(180.00deg, rgb(33, 57, 83) 4.91%,rgb(27, 45, 65) 100%);
 	overflow: hidden;
-	
+
+	@include max-screen($sm){
+		padding-block: rem(83);
+	}
+	@include max-screen($xss){
+		padding-block: rem(97);
+	}
+
 	&:before{
 		content: '';
 		position: absolute;

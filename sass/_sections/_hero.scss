@@ -23,6 +23,8 @@
 }
 .hero__content {
 	flex: 1 1 auto;
+	position: relative;
+	z-index: 2;
 
 	@include min-screen($md){
 		

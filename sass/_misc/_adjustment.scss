@@ -17,6 +17,7 @@ html, body{
 	overflow: hidden;
 }
 body{
+	min-height: 100vh;
 	font-family: $light;
 	font-weight: normal;
 	font-size: rem($baseFontSize);

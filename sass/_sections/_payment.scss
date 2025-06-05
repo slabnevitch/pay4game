@@ -1,0 +1,89 @@
+/*--------------------payment----------------------*/
+.payment-page{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(180.00deg, rgb(33, 57, 83) 4.91%,rgb(27, 45, 65) 100%);
+}
+.payment{
+	width: 100%; 
+	max-width: rem(900);
+	min-height: rem(541);
+	padding: rem(39);
+	margin-inline: auto;
+	display: flex;
+	border-radius: rem(12);
+	background-color: #213004;
+}
+.payment__column{
+	flex: 0 0 50%;
+}
+.payment__logo{
+	display: inline-block;
+	text-align: center;
+	img{
+		max-width: rem(90);
+	}
+}
+.payment__container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding-right: rem(21);
+}
+.payment__top {
+	margin-bottom: 24px;
+	flex: 0 0 auto;
+	text-align: center;
+}
+.payment__content {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.payment__title {
+	margin-bottom: rem(16);
+	font-size: rem(32);
+	font-family: $bold;
+	line-height: calc(38/32);
+	text-align: center;
+}
+.payment__subtitle {
+	margin-bottom: rem(16);
+	font-size: rem(16);
+	font-family: $light;
+	line-height: calc(19/16);
+	text-align: center;
+}
+.order__form {
+	&--payment{
+		margin-inline: rem(-9);
+		.form-order__input{
+			margin-inline: rem(9);
+			margin-bottom: rem(16);
+		}
+	}
+}
+.form-order {}
+.form-order__input {}
+.form-order__col {
+
+}
+.form-order__text {}
+.form-order__bottom {}
+.btn {}
+.form-order__send {}
+.payment__logos {}
+.payment__info {}
+.info-payment {}
+.info-payment__title {}
+.info-payment__price {}
+.info-payment__text {}
+.info-payment__help {}
+.info-payment__soc-list {}
+.info-payment__soc-item {}
+.info-payment__soc-link {}
+.info-payment__bottom {}
+/*--------------------END payment----------------------*/ 

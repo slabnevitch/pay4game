@@ -18,17 +18,52 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <div class="main-wrapper">
-      <div class="payment-page">
-        <div class="payment">
-          <div class="payment__column"><a class="payment__logo"><img src="img/logo.svg" alt="alt"></a></div>
-          <div class="payment__column"></div>
+    <div class="payment-page">
+      <div class="payment">
+        <div class="payment__column">
+          <div class="payment__container">
+            <div class="payment__top"><a href="#" class="payment__logo"><img src="img/logo.svg" alt="alt"></a></div>
+            <div class="payment__content">
+              <div class="payment__title">Оплата заказа</div>
+              <div class="payment__subtitle">Введите данные карты для продолжения оплаты</div>
+              <form action="#" class="order__form order__form--payment form-order">
+                <input autocomplete="off" type="text" name="" placeholder="Номер карты" class="form-order__input">
+                <div class="form-order__col">
+                  <input autocomplete="off" type="text" name="" placeholder="ММ/ГГ" class="form-order__input">
+                </div>
+                <div class="form-order__col">
+                  <input autocomplete="off" type="text" name="" placeholder="СVC" class="form-order__input">
+                </div>
+                <div class="form-order__text">как на карте</div>
+                <input autocomplete="off" type="text" name="" placeholder="IVAN INANOV" class="form-order__input">
+                <div class="form-order__bottom">
+                  <button type="submit" class="btn form-order__send">Оплатить</button>
+                </div>
+              </form>
+              <div class="payment__logos"><img src="img/methods/1.svg" alt="alt" class="payment__logo"><img src="img/methods/2.svg" alt="alt" class="payment__logo"><img src="img/methods/3.svg" alt="alt" class="payment__logo"><img src="img/methods/4.svg" alt="alt" class="payment__logo">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="payment__column">
+          <div class="payment__info info-payment">
+            <div class="info-payment__title">Pay4game</div>
+            <div class="info-payment__price">322.22 руб.</div>
+            <div class="info-payment__title">Назначение платежа</div>
+            <div class="info-payment__text">Оплата счета 256352073</div>
+            <div class="info-payment__help">
+              <div class="info-payment__title">Нужна помощь?</div>
+              <ul class="info-payment__soc-list">
+                <li class="info-payment__soc-item"><a href="#" class="info-payment__soc-link"><img src="img/payment-page/logos_telegram.svg" alt="alt"></a></li>
+              </ul>
+            </div>
+            <div class="info-payment__bottom">
+              <div class="info-payment__text">Совершая оплату вы соглашаетесь с <a href="#">договором офферты</a></div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="menu-cover"></div>
     </div>
-    
-    
     
     
     <script src="js/main.min.js"></script>

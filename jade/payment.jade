@@ -8,10 +8,49 @@ block content
 	.payment-page
 		.payment
 			.payment__column
-				a.payment__logo
-					img(src="img/logo.svg" alt="alt")
+				.payment__container
+					.payment__top
+						a(href="#").payment__logo
+							img(src="img/logo.svg" alt="alt")
+					.payment__content
+						.payment__title Оплата заказа
+						.payment__subtitle Введите данные карты для продолжения оплаты
+						
+						form(action="#").order__form.order__form--payment.form-order
+							input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="Номер карты")
+
+							.form-order__col
+								input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="ММ/ГГ")
+							.form-order__col
+								input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="СVC")
+
+							.form-order__text как на карте
+							
+							input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="IVAN INANOV")
+
+							.form-order__bottom
+								button.btn.form-order__send(type="submit") Оплатить
+
+						.payment__logos
+							- for (var i=0; i < 4; i++)
+								img(src="img/methods/"+(i+1) + ".svg" class="payment__logo" alt="alt")
+						
 			.payment__column
-	
+				.payment__info.info-payment
+					.info-payment__title Pay4game
+					.info-payment__price 322.22 руб.
+					.info-payment__title Назначение платежа
+					.info-payment__text Оплата счета 256352073
+
+					.info-payment__help
+						.info-payment__title Нужна помощь?
+						ul.info-payment__soc-list
+							li.info-payment__soc-item
+								a(href="#").info-payment__soc-link
+									img(src="img/payment-page/logos_telegram.svg" alt="alt")
+
+					.info-payment__bottom
+						.info-payment__text Совершая оплату вы соглашаетесь с #[a(href="#") договором офферты]
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

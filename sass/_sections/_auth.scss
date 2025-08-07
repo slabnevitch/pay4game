@@ -1,0 +1,156 @@
+/*--------------------auth----------------------*/
+.auth-block {
+	position: relative;
+	padding: rem(34px) rem(46px);
+	max-width: rem(557);
+	width: 100%;
+	background-color: #fff;
+	border-radius: rem(34px);
+	color: #000;
+
+	@include max-screen($xsss){
+		padding-inline: rem(24px);
+		border-radius: rem(10px);
+	}
+
+	&:before{
+		content: '';
+		display: block;
+		width: rem(70px);
+		height: rem(10px);
+		margin-bottom: rem(20px);
+		background-color: $accent;
+	}
+
+	.btn {
+		height: rem(76px);
+		color: #fff;
+	  font-family: "RobotoMedium", sans-serif;
+	  font-size: rem(22px);
+	}
+}
+.auth-block__form {
+	.form__custom{
+	display: flex;
+	align-items: center;
+	column-gap: rem(19px);
+
+		@media (any-hover: hover) { //только для устройств с ховером
+				cursor: pointer;
+
+			}
+	}
+.form__custom-policy{
+	flex: 0 1 auto;
+	padding: rem(20px);
+	display: flex;
+	align-items: center;
+	column-gap: rem(19px);
+	border-radius: rem(24px);
+	background-color: #EFEFEF;
+
+	@include max-screen($xss){
+		flex: 1 1 auto;
+	}
+}
+
+.form__check {
+	@include checkbox();
+	&:checked{ 
+		& + .form__custom-check{
+			background-color: $accent;
+			
+			&:before{
+				display: block;
+			}
+		}
+		& ~ .form__policy{
+
+			color: #000;
+		}
+	}
+}
+.form__custom-check {
+	flex-shrink: 0;
+	display: block;
+	position: relative;
+	width: rem(36);
+	height: rem(36);
+	border-radius: rem(9);
+	border: none;
+	background-color: #D9D9D9;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+				&:hover{
+				cursor: pointer;
+			}
+		}
+	&:before{
+		@include absolute-center-old;
+		content: '';
+		display: none;
+		width: rem(23);
+		height: rem(23);
+		background-image: url(../img/auth-page/check.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		// background-size: cover;
+	}
+}
+.form__policy{
+	font-size: rem(19px);
+	color: #787878;
+	font-family: $reg;
+}
+}
+.auth-block__title {
+	margin-bottom: 1rem;
+	font-size: rem(29px);
+	font-family: $bold;
+}
+.auth-block__text {
+	margin-bottom: 29px;
+	font-size: rem(21px);
+	font-family: $light;
+}
+.auth-block__formgroup {
+	position: relative;
+}
+.auth-block__icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: rem(24px);
+}
+.auth-block__input{
+	height: rem(76px);
+	padding-right: rem(25px);
+	padding-left: rem(71px);
+	margin-bottom: 1rem;
+	border-radius: rem(10px);
+	border: rem(1px) solid $accent;
+	background-color: #fff;
+	@include placecolor(#808080);
+	font-family: inherit;
+	font-size: rem(19px);
+
+	@include max-screen($mins){
+		font-size: 17px;
+	}
+}
+.auth-block__bottom {
+	display: flex;
+	column-gap: rem(13px);
+
+	&--enter{
+		@include max-screen($xss){
+			flex-direction: column;
+			row-gap: 1rem;
+		}
+	}
+}
+
+.auth-block__enter{
+	flex: 1 1 auto;
+}
+/*--------------------END auth----------------------*/ 

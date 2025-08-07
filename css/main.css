@@ -431,6 +431,9 @@ h2 {
     background-color: #80d42f;
   }
 }
+.btn-fw {
+  width: 100%;
+}
 
 .toggle-mnu {
   position: relative;
@@ -482,6 +485,201 @@ h2 {
 }
 
 /*--------------------END ui----------------------*/
+/*--------------------auth----------------------*/
+.auth-block {
+  position: relative;
+  padding: 2.125rem 2.875rem;
+  max-width: 34.8125rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2.125rem;
+  color: #000;
+}
+@media only screen and (max-width: 23.4375em) {
+  .auth-block {
+    padding-inline: 1.5rem;
+    border-radius: 0.625rem;
+  }
+}
+.auth-block:before {
+  content: "";
+  display: block;
+  width: 4.375rem;
+  height: 0.625rem;
+  margin-bottom: 1.25rem;
+  background-color: #73C128;
+}
+.auth-block .btn {
+  height: 4.75rem;
+  color: #fff;
+  font-family: "RobotoMedium", sans-serif;
+  font-size: 1.375rem;
+}
+
+.auth-block__form .form__custom {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 1.1875rem;
+}
+@media (any-hover: hover) {
+  .auth-block__form .form__custom {
+    cursor: pointer;
+  }
+}
+.auth-block__form .form__custom-policy {
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  padding: 1.25rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 1.1875rem;
+  border-radius: 1.5rem;
+  background-color: #EFEFEF;
+}
+@media only screen and (max-width: 30em) {
+  .auth-block__form .form__custom-policy {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+}
+.auth-block__form .form__check {
+  position: absolute;
+  box-sizing: border-box;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  display: block;
+  left: 50%;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+.auth-block__form .form__check:checked + .form__custom-check {
+  background-color: #73C128;
+}
+.auth-block__form .form__check:checked + .form__custom-check:before {
+  display: block;
+}
+.auth-block__form .form__check:checked ~ .form__policy {
+  color: #000;
+}
+.auth-block__form .form__custom-check {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: block;
+  position: relative;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5625rem;
+  border: none;
+  background-color: #D9D9D9;
+}
+@media (any-hover: hover) {
+  .auth-block__form .form__custom-check:hover {
+    cursor: pointer;
+  }
+}
+.auth-block__form .form__custom-check:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  content: "";
+  display: none;
+  width: 1.4375rem;
+  height: 1.4375rem;
+  background-image: url(../img/auth-page/check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.auth-block__form .form__policy {
+  font-size: 1.1875rem;
+  color: #787878;
+  font-family: "RobotoRegular", sans-serif;
+}
+
+.auth-block__title {
+  margin-bottom: 1rem;
+  font-size: 1.8125rem;
+  font-family: "RobotoBold", sans-serif;
+}
+
+.auth-block__text {
+  margin-bottom: 29px;
+  font-size: 1.3125rem;
+  font-family: "RobotoLight", sans-serif;
+}
+
+.auth-block__formgroup {
+  position: relative;
+}
+
+.auth-block__icon {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1.5rem;
+}
+
+.auth-block__input {
+  height: 4.75rem;
+  padding-right: 1.5625rem;
+  padding-left: 4.4375rem;
+  margin-bottom: 1rem;
+  border-radius: 0.625rem;
+  border: 0.0625rem solid #73C128;
+  background-color: #fff;
+  font-family: inherit;
+  font-size: 1.1875rem;
+}
+.auth-block__input::-webkit-input-placeholder {
+  color: #808080;
+  opacity: 1;
+}
+.auth-block__input::-moz-placeholder {
+  color: #808080;
+  opacity: 1;
+}
+.auth-block__input:-moz-placeholder {
+  color: #808080;
+  opacity: 1;
+}
+.auth-block__input:-ms-input-placeholder {
+  color: #808080;
+  opacity: 1;
+}
+@media only screen and (max-width: 20em) {
+  .auth-block__input {
+    font-size: 17px;
+  }
+}
+
+.auth-block__bottom {
+  display: -ms-flexbox;
+  display: flex;
+  column-gap: 0.8125rem;
+}
+@media only screen and (max-width: 30em) {
+  .auth-block__bottom--enter {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+
+.auth-block__enter {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+/*--------------------END auth----------------------*/
 /*--------------------features----------------------*/
 .features {
   padding-top: 3rem;

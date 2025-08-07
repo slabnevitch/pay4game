@@ -52,7 +52,8 @@
 	margin-inline: auto;
 	display: flex;
 	border-radius: rem(12);
-	background-color: #213004;
+	background-color: #fff;
+	color: #000;
 
 	@include max-screen($sm){
 		max-width: rem(536);
@@ -61,7 +62,12 @@
 	}
 	@include max-screen($xs){
 		max-width: rem(332);
-		padding: rem(24) rem(16);
+		padding: rem(65) rem(16);
+	}
+
+	.btn{
+		color: #fff;
+		font-family: $med;
 	}
 }
 .payment__column{
@@ -120,6 +126,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
+	.payment__logo{
+		margin-bottom: rem(22px);
+	}
 }
 .payment__header{
 	text-align: center;
@@ -145,6 +155,14 @@
 		.form-order__input{
 			padding-inline: rem(12);
 			margin-bottom: rem(16);
+			background-color: #fff;
+			@include placecolor(#808080);
+			color: #808080;
+			text-align: left;
+
+			&--code{
+				text-align: center;
+			}
 
 			&--mb24{
 				margin-bottom: rem(24);
@@ -155,6 +173,7 @@
 .form-order {
 	&__text{
 		margin-bottom: rem(16);
+		text-align: center;
 	}
 	&__code{
 		margin-bottom: rem(8);
@@ -208,13 +227,13 @@
 	}
 }
 .payment__info {
-	padding-top: rem(15);
+	padding-top: rem(85);
 
 	@include max-screen($sm){
-		padding-top: rem(77);
+		padding-top: rem(38);
 	}
 	@include max-screen($xs){
-		padding-top: rem(60);
+		padding-top: rem(34);
 	}
 
 	@include min-screen($sm){
@@ -232,13 +251,13 @@
 	font-family: $med;
 }
 .info-payment__help {
-	margin-top: rem(94);
+	margin-top: rem(34);
 
 	@include max-screen($sm){
-		margin-top: rem(76);
+		margin-top: rem(37);
 	}
 	@include max-screen($xs){
-		margin-top: rem(59);
+		margin-top: rem(34);
 	}
 }
 .info-payment__soc-list {
@@ -251,16 +270,31 @@
 	list-style-type: none;
 }
 .info-payment__soc-link {
-	width: rem(24);
-	height: rem(24);
+	padding-left: rem(8px);
+	padding-right: rem(14px);
+	display: inline-flex;
+	align-items: center;
+	column-gap: rem(10);
+	height: rem(34);
+	border-radius: rem(100px);
+	font-size: rem(14px);
+	font-family: $med;
+	color: #fff;
+	background: #2AABEE;
+	text-decoration: none;
 }
 .info-payment__bottom {
+	@include min-screen($sm){
+		max-width: rem(281);	
+	}
+
 	a{
 		color: $accent;
 		text-decoration: none;
 	}
 }
 .payment__qrcode{
+	margin-top: rem(28px);
 	max-width: rem(200);
 	margin-inline: auto;
 	img{

@@ -11,7 +11,7 @@ block content
 				.payment__container
 					.payment__top
 						a(href="#").payment__logo
-							img(src="img/logo.svg" alt="alt")
+							img(src="img/payment-page/logo-black.svg" alt="alt")
 					.payment__content
 						.payment__header
 							.payment__title Оплата заказа
@@ -26,7 +26,7 @@ block content
 								.form-order__col
 									input(autocomplete="off" type="text" name="" class="form-order__input form-order__input--align-left" placeholder="СVC")
 
-							.form-order__text как на карте
+							.form-order__text Как на карте
 							
 							input(autocomplete="off" type="text" name="" class="form-order__input" placeholder="IVAN INANOV")
 
@@ -35,7 +35,7 @@ block content
 
 						.payment__logos
 							- for (var i=0; i < 4; i++)
-								img(src="img/methods/"+(i+1) + ".svg" class="payment__logo" alt="alt")
+								img(src="img/payment-page/methods/"+(i+1) + ".svg" class="payment__logo" alt="alt")
 						
 			.payment__column
 				.payment__info.info-payment
@@ -50,6 +50,7 @@ block content
 							li.info-payment__soc-item
 								a(href="#").info-payment__soc-link
 									img(src="img/payment-page/logos_telegram.svg" alt="alt")
+									| Связаться
 
 					.info-payment__bottom
 						.info-payment__text Совершая оплату вы соглашаетесь с #[a(href="#") договором офферты]

@@ -486,6 +486,53 @@ h2 {
 
 /*--------------------END ui----------------------*/
 /*--------------------auth----------------------*/
+.payment-page {
+  position: relative;
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgb(33, 57, 83) 4.91%, rgb(27, 45, 65) 100%);
+  overflow: hidden;
+}
+@media only screen and (max-width: 47.99875em) {
+  .payment-page {
+    padding-block: 5.1875rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .payment-page {
+    padding-block: 6.0625rem;
+  }
+}
+.payment-page:before {
+  content: "";
+  position: absolute;
+  bottom: -71.6875rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 99rem;
+  height: 99rem;
+  filter: blur(400px);
+  background: rgba(115, 193, 40, 0.1);
+}
+@media only screen and (max-width: 47.99875em) {
+  .payment-page:before {
+    height: 148rem;
+    bottom: -13.125rem;
+  }
+}
+@media only screen and (max-width: 47.99875em) {
+  .payment-page:before {
+    height: 148rem;
+    bottom: 0;
+  }
+}
+
 .auth-block {
   position: relative;
   padding: 2.125rem 2.875rem;
